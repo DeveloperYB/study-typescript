@@ -1,8 +1,8 @@
 # Studying and testing typescript
 
-### Learning typescript by making a blockchain
+#### Learning typescript by making a blockchain
 
-> 1. Create a config.json file for compiling typescript (tsconfig.json) \
+#### 1. Create a config.json file for compiling typescript (tsconfig.json)
 Basic config setting (the code below)
 
 ```
@@ -19,7 +19,7 @@ Basic config setting (the code below)
 
 > Node_modules in an array is usually basic and required.
 ---
-> 2. How to compile typscript and test it?\
+#### 2. How to compile typscript and test it?
 Use package.json and edit it like the code below
 ```
 {
@@ -32,7 +32,7 @@ Use package.json and edit it like the code below
 ```
 > Run "yarn start", it will excute a js code compiled index.ts after cli tsc (yarn prestart)
 ---
-> 3. Typescript will say "it will gonna be an error" when i make a stupid mistake, like the code below
+#### 3. Typescript will say "it will gonna be an error" when i make a stupid mistake, like the code below
 
 ```
 const name = 'Wabi',
@@ -56,3 +56,4 @@ const sayHiFn = (name, age, gender?) => {
     ...
 };
 ```
+---
