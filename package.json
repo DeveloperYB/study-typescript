@@ -1,0 +1,7 @@
+{
+  "name": "typechain",
+  "version": "1.0.0",
+  "description": "Studying typescript with coding blockchain",
+  "main": "index.js",
+  "license": "MIT"
+}
