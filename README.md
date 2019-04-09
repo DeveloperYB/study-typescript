@@ -68,6 +68,8 @@ const sayHiFn = (name, age, gender?) => {
 
 > tsc-watch will make it easy for me
 
+---
+
 #### 5. Edit tsconfig.json for setting directories output & include.
 
 ```
@@ -80,3 +82,38 @@ const sayHiFn = (name, age, gender?) => {
     ...
 }
 ```
+
+---
+
+#### 6. What is interface? and Class vs Interface
+
+```
+interface Human {
+    name: string;
+    age: number;
+    gender: string;
+    mark: boolean;
+    addTxt: any;
+}
+```
+
+```
+class Human {
+    public name: string;
+    public age: number;
+    public gender: string;
+    public mark: boolean;
+    public addTxt: any;
+    constructor(name: string, age: number, gender: string, mark: boolean, addTxt?) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.mark = mark;
+        this.addTxt = addTxt;
+    }
+}
+```
+
+> An interface is a group of related properties and methods that describe an object,\
+but neither provides implementation nor initialisation for them.\
+Since both of these structures define what an object looks like, both can be used in TypeScript to type our variables.
