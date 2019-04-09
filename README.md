@@ -57,3 +57,13 @@ const sayHiFn = (name, age, gender?) => {
 };
 ```
 ---
+
+#### 4. Alway type "yarn start" for running compiling typescript......?!
+
+```
+"scripts": {
+    "start": "tsc-watch --onSuccess \" node dist/index.js\" "
+}
+```
+
+> tsc-watch will make it easy for me
