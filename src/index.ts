@@ -1,10 +1,23 @@
-const name = 'Wabi',
-    age = 29,
-    gender = 'male';
+interface Human {
+    name: string;
+    age: number;
+    gender: string;
+    mark: boolean;
+    addTxt: any;
+}
 
-const sayHiFn = (name: string, age: number, gender: string): string => {
-    return `Hey ${name}, your age is ${age} isn't it? and also your gender is ${gender}. Right?`;
+const person = {
+    name: 'Wabi',
+    age: 29,
+    gender: 'male',
+    mark: false,
+    addTxt: ''
+};
+const sayHiFn = (person: Human): string => {
+    return `Hey ${person.name}, your age is ${person.age} isn't it? and also your gender is ${person.gender}. Right ${
+        person.mark === true ? '?' : ''
+    }`;
 };
 
-console.log(sayHiFn(name, age, gender));
+console.log(sayHiFn(person));
 export {};
