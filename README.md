@@ -67,3 +67,16 @@ const sayHiFn = (name, age, gender?) => {
 ```
 
 > tsc-watch will make it easy for me
+
+#### 5. Edit tsconfig.json for setting directories output & include.
+
+```
+{
+    "compilerOptions": {
+        ...
+        "outDir": "dist"
+    },
+    "include": ["src/**/*"],
+    ...
+}
+```

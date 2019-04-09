@@ -1,4 +1,11 @@
+# dependencies
 /node_modules
-/dist
 
-index.js.map
+# production
+dist
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.cache
