@@ -116,4 +116,11 @@ class Human {
 
 > An interface is a group of related properties and methods that describe an object,\
 but neither provides implementation nor initialisation for them.\
-Since both of these structures define what an object looks like, both can be used in TypeScript to type our variables.
+Since both of these structures define what an object looks like,\
+both can be used in TypeScript to type our variables.
+
+> HyunSeob님 블로그 글 참조\
+https://hyunseob.github.io/2016/10/17/typescript-interface/
+
+---
+

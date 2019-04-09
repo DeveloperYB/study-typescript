@@ -1,40 +1,46 @@
-// interface Human {
-//     name: string;
-//     age: number;
-//     gender: string;
-//     mark: boolean;
-//     addTxt: any;
-// }
+import * as CryptoJS from 'crypto-js';
 
-class Human {
-    public name: string;
-    public age: number;
-    public gender: string;
-    public mark: boolean;
-    public addTxt: any;
-    constructor(name: string, age: number, gender: string, mark: boolean, addTxt?) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.mark = mark;
-        this.addTxt = addTxt;
+class Block {
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public data: string;
+    public timestamp: number;
+
+    static calculateBlockHash = (index: number, previousHash: string, timestamp: number, data: string): string =>
+        CryptoJS.SHA256(index + previousHash + timestamp + data).toString();
+
+    constructor(index: number, hash: string, previousHash: string, data: string, timestamp: number) {
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
     }
 }
 
-const Wife = new Human('Yuna', 30, 'female', true, 'Ma boss');
+const genesisBlock: Block = new Block(0, '2020202020022222', '', 'yo man', 123456);
 
-const person = {
-    name: 'Wabi',
-    age: 29,
-    gender: 'male',
-    mark: false,
-    addTxt: ''
-};
-const sayHiFn = (person: Human): string => {
-    return `Hey ${person.addTxt} ${person.name}, your age is ${person.age} isn't it? and also your gender is ${person.gender}. Right ${
-        person.mark === true ? '?' : ''
-    }`;
+let blockChain: Block[] = [genesisBlock];
+
+const getBlockChain = (): Block[] => blockChain;
+
+const getLatestBlock = (): Block => blockChain[blockChain.length - 1];
+
+const getNewTimeStamp = (): number => Math.round(new Date().getTime() / 1000);
+
+const createNewBlock = (data: string): Block => {
+    const previousBlock: Block = getLatestBlock();
+    const newIndex: number = previousBlock.index + 1;
+    const newTimestamp: number = getNewTimeStamp();
+    const newHash: string = Block.calculateBlockHash(newIndex, previousBlock.hash, newTimestamp, data);
+    const newBlock: Block = new Block(newIndex, newHash, previousBlock.hash, data, newTimestamp);
+    // blockChain.push(newBlock);
+    return newBlock;
 };
 
-console.log(sayHiFn(Wife));
+console.log(createNewBlock('Waaaaaatsup'), createNewBlock('hahaha'));
+
+// console.log(blockChain);
+
 export {};
