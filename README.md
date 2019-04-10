@@ -124,3 +124,45 @@ https://hyunseob.github.io/2016/10/17/typescript-interface/
 
 ---
 
+#### 7. Result array with blockchain code
+
+```
+[ Block {
+    index: 0,
+    hash: '2020202020022222',
+    previousHash: '',
+    data: 'yo man',
+    timestamp: 123456 },
+  Block {
+    index: 1,
+    hash:
+     'e836e4b87a2db9c3b5828b601690ea62c50eb05a50b8e292ab45a4a61770c986',
+    previousHash: '2020202020022222',
+    data: 'Waaaaaatsup : 1',
+    timestamp: 1554893858 },
+  Block {
+    index: 2,
+    hash:
+     '5801c1a6f98601786e20ae9d6f96a59722772809a6775647eb40e28fb3b14171',
+    previousHash:
+     'e836e4b87a2db9c3b5828b601690ea62c50eb05a50b8e292ab45a4a61770c986',
+    data: 'hahaha : 2',
+    timestamp: 1554893858 },
+  Block {
+    index: 3,
+    hash:
+     'e4eddae8291307651fb409e1ef930cd6cfabb3340c297cc1bde5d7341058c21d',
+    previousHash:
+     '5801c1a6f98601786e20ae9d6f96a59722772809a6775647eb40e28fb3b14171',
+    data: 'dafasfasf : 3',
+    timestamp: 1554893858 },
+  Block {
+    index: 4,
+    hash:
+     'c4aad9088b2a151e2a1bdd693a5ccb4dff37fd5a48632d458ea4a0582a42f623',
+    previousHash:
+     'e4eddae8291307651fb409e1ef930cd6cfabb3340c297cc1bde5d7341058c21d',
+    data: 'afewfewewe : 4',
+    timestamp: 1554893858 } 
+]
+```
